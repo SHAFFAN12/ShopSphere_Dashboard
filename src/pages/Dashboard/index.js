@@ -41,6 +41,7 @@ const Dashboard = () => {
 
   useEffect(() =>{
     context.setIsHideSidebarAndHeader(false);
+    window.scrollTo(0,0);
   },[])
 
   const handleClose = () => {
@@ -395,7 +396,7 @@ const Dashboard = () => {
             </table>
 
             <div className='d-flex tableFooter'>
-              <p>showing<b>12</b> of <b>60</b></p>
+              <p>showing<b> 12</b> of <b>60</b></p>
               <Pagination count={10} color="primary" className="pagination" showFirstButton showLastButton />
             </div>
           </div>

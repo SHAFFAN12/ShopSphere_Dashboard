@@ -67,7 +67,9 @@ const Header = () => {
             </div>
 
             <div className="col-sm-7 d-flex align-items-center justify-content-end part3">
-              <Button className="rounded-circle mr-3"><MdOutlineLightMode /></Button>
+              <Button className="rounded-circle mr-3" onClick={() => context.setThemeMode(!context.themeMode)}>
+                <MdOutlineLightMode />
+                </Button>
               <Button className="rounded-circle mr-3"><GiShoppingCart /></Button>
 
 

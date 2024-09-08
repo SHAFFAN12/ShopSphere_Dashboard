@@ -4,16 +4,23 @@ import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { IoIosLock } from "react-icons/io";
 import { FaGoogle, FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa6";
-import Image1 from "../../assets/images/log.svg";
+// import Image1 from "../../assets/images/log.svg";
+import Image1 from "../../assets/images/1.jpg";
+// import Image1 from "../../assets/images/2.jpg";
+// import Image1 from "../../assets/images/3.jpg";
 import Image2 from "../../assets/images/register.svg";
 import { MyContext } from '../../App';
 import { FaUserAlt } from "react-icons/fa";
 import BackgroundImage from "../../assets/images/pattern-2.png";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import { IoShieldCheckmarkSharp} from "react-icons/io5";
+
 
 const Login2 = () => {
   const [isSignUpMode, setIsSignUpMode] = useState(false);
   const [inputIndex, setInputIndex] = useState(null);
-
+  
+  const [isShowPassword,setIsShowPassword] = useState(false);
 
 
   const context = useContext(MyContext);
@@ -45,17 +52,30 @@ const Login2 = () => {
               <h2 className="title">Sign in</h2>
               <div className={`input-field ${inputIndex === 0 && 'focus'}`}>
                 <FaUserAlt />
-                <input type="text" placeholder="Username" onFocus={() => focusInput(0)} onBlur={() => setInputIndex(null)} />
+                <input type="text" placeholder="Email" onFocus={() => focusInput(0)} onBlur={() => setInputIndex(null)} autoFocus/>
               </div>
+
+
+
               <div className={`input-field ${inputIndex === 1 && 'focus'}`}>
                 <IoIosLock />
                 <input type="password" placeholder="Password" onFocus={() => focusInput(1)} onBlur={() => setInputIndex(null)} />
+                <span className="showPassword" onClick={() => setIsShowPassword(!isShowPassword)}>
+                      {
+                        isShowPassword === true ? <FaRegEyeSlash/> : <FaRegEye/>
+                      }
+                      </span>
               </div>
+
+
+
               <input type="submit" value="Login" className="btn solid" />
+
+
               <p className="social-text">Or Sign in with social platforms</p>
               <div className="social-media">
                 <Link to={'/'} className="social-icon">
-                  <FaFacebookF />
+                  <FaFacebookF/>
                 </Link>
                 <Link to={'/'} className="social-icon">
                   <FaTwitter />
@@ -71,19 +91,44 @@ const Login2 = () => {
 
             <form className="sign-up-form">
               <h2 className="title">Sign up</h2>
+
               <div className={`input-field ${inputIndex === 2 && 'focus'}`}>
                 <FaUserAlt />
-                <input type="text" placeholder="Username" onFocus={() => focusInput(2)} onBlur={() => setInputIndex(null)} />
+                <input type="text" placeholder="Username" onFocus={() => focusInput(2)} onBlur={() => setInputIndex(null)} autoFocus/>
               </div>
+
+
               <div className={`input-field ${inputIndex === 3 && 'focus'}`}>
                 <MdEmail />
                 <input type="email" placeholder="Email" onFocus={() => focusInput(3)} onBlur={() => setInputIndex(null)} />
               </div>
+
+
               <div className={`input-field ${inputIndex === 4 && 'focus'}`}>
                 <IoIosLock />
                 <input type="password" placeholder="Password" onFocus={() => focusInput(4)} onBlur={() => setInputIndex(null)} />
+                <span className="showPassword" onClick={() => setIsShowPassword(!isShowPassword)}>
+                      {
+                        isShowPassword === true ? <FaRegEyeSlash/> : <FaRegEye/>
+                      }
+                      </span>
               </div>
+
+
+              <div className={`input-field ${inputIndex === 5 && 'focus'}`}>
+                <IoShieldCheckmarkSharp />
+                <input type="password" placeholder="Confirm Password" onFocus={() => focusInput(5)} onBlur={() => setInputIndex(null)} />
+                <span className="showPassword" onClick={() => setIsShowPassword(!isShowPassword)}>
+                      {
+                        isShowPassword === true ? <FaRegEyeSlash/> : <FaRegEye/>
+                      }
+                      </span>
+              </div>
+
+
               <input type="submit" className="btn" value="Sign up" />
+
+
               <p className="social-text">Or Sign up with social platforms</p>
               <div className="social-media">
                 <Link to={'/'} className="social-icon">

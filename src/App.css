@@ -10,6 +10,10 @@ body{
     overflow-x: hidden;
 }
 
+body.dark{
+    background: #071739 !important;
+}
+
 ::-webkit-scrollbar{
     width: 5px !important;
     height: 5px !important;
@@ -82,6 +86,11 @@ header{
     z-index: 1000;
     -webkit-background-filter: blur(5px);
 }
+
+body.dark header{
+    background: #112143 !important;
+}
+
 header .logo img{
     width: 150px;
 }
@@ -104,18 +113,27 @@ header button.rounded-circle:hover svg{
     color: #0858f7 !important;
 }
 
+body.dark header button.rounded-circle{
+    background: #112755 !important;
+}
+
+body.dark header button.rounded-circle svg{
+    color: #fff !important;
+}
+
+
 header .part2{
     padding-left: 50px;
 }
 
-.serachBox{
+.searchBox{
     width: 400px;
     height: 40px;
     background: #f0f5ff;
     border-radius: 6px;
     padding: 3px 15px;
 }
-.serachBox input{
+.searchBox input{
     background: transparent;
     border: 0px;
     outline: none;
@@ -123,13 +141,23 @@ header .part2{
     font-size: 14px;
     color: #292929;
 }
-.serachBox input::-webkit-input-placeholder{
+.searchBox input::-webkit-input-placeholder{
     color: rgba(0, 0, 0, 0.6);
 }
 
-.serachBox svg{
+.searchBox svg{
     font-size: 18px;
     color: #292929;
+}
+
+body.dark .searchBox{
+    background: #12254e !important;
+}
+
+body.dark .searchBox input,
+body.dark .searchBox input::-webkit-input-placeholder,
+body.dark .searchBox svg{
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .myAccount{
@@ -184,6 +212,19 @@ header .part2{
     opacity: 0.7;
 }
 
+body.dark .myAccount .userInfo *{
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .MuiPaper-elevation{
+    background-color: #12254e !important;
+}
+
+body.dark .MuiPaper-elevation li *,
+body.dark .MuiPaper-elevation li{
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
 #account-menu li{
     font-size: 14px !important;
     padding: 12px 15px !important;
@@ -207,10 +248,19 @@ header .part2{
     font-size: 17px;
     font-weight: 600;
 }
+
+body.dark .dropdown_list .head h4{
+    color: rgba(255, 255, 255, 0.9) !important;
+}
 .dropdown_list li.MuiButtonBase-root{
     background: #ebf6ff !important;
     color: #000 !important;
     padding: 10px 15px !important;
+}
+
+body.dark .dropdown_list li.MuiButtonBase-root{
+    background-color: #12254e !important;
+    background: #12254e !important;
 }
 
 .dropdown_list li.MuiButtonBase-root:hover{
@@ -272,6 +322,10 @@ header .part2{
     transition: all .3s;
 }
 
+body.dark .main .SidebarWrapper .Sidebar{
+    background: #112143 !important;
+}
+
 .main .SidebarWrapper.toggle .Sidebar{
     left: -100%;
 }
@@ -308,6 +362,10 @@ header .part2{
     font-family: "Open Sans", sans-serif !important;
 }
 
+body.dark .main .SidebarWrapper .Sidebar ul li button{
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
 .main .SidebarWrapper .Sidebar ul li button .icon{
     display: flex;
     align-items: center;
@@ -320,6 +378,7 @@ header .part2{
 .main .SidebarWrapper .Sidebar ul li button .icon svg{
     font-size: 22px;
 }
+
 .main .SidebarWrapper .Sidebar ul li button *{
     color: #5e5d72 !important;
 }
@@ -337,9 +396,16 @@ header .part2{
 .main .SidebarWrapper .Sidebar ul li button:hover{
     background: #f1f1f1 !important;
 }
+body.dark .main .SidebarWrapper .Sidebar ul li button:hover{
+    background: rgba(255, 255, 255, 0.1) !important;
+}
 
 .main .SidebarWrapper .Sidebar ul li button.active{
     background: #f1f1f1 !important;
+}
+
+body.dark .main .SidebarWrapper .Sidebar ul li button.active{
+    background: rgba(255, 255, 255, 0.1) !important;
 }
 
 .main .SidebarWrapper .Sidebar ul li button.active .icon svg {
@@ -368,6 +434,11 @@ header .part2{
     background: rgba(0, 0, 0, 0.2);
 }
 
+
+body.dark .main .SidebarWrapper .Sidebar ul .submenu::before{
+    background: rgba(255, 255, 255, 0.2);
+}
+
 .main .SidebarWrapper .Sidebar ul .submenu li{
     width: 100%;
     list-style: none;
@@ -382,7 +453,15 @@ header .part2{
     font-weight: 500;
     transition: all .3s;
 }
+
+body.dark .main .SidebarWrapper .Sidebar ul .submenu li a{
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .main .SidebarWrapper .Sidebar ul .submenu li a:hover{
+    color: #0858f7 !important;
+}
+body.dark .main .SidebarWrapper .Sidebar ul .submenu li a:hover{
     color: #0858f7 !important;
 }
 
@@ -426,6 +505,11 @@ header .part2{
     justify-content: center;
     position: relative;
     overflow: hidden;
+}
+
+body.dark .logoutWrapper .logoutBox{
+    background-image: linear-gradient(#183e8c,#163474)  !important;
+    background: transparent;
 }
 
 .logoutWrapper .logoutBox::before{
@@ -602,23 +686,55 @@ header .part2{
     color: #403e57;
 }
 
+body.dark .card{
+    background: #112143 !important;
+}
+body.dark .card .hd{
+   font-size: 18px;
+   font-weight: bold;
+   color: rgba(255, 255, 255, 0.8);
+}
+
  .cardFilters .col-md-3 h4{
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: capitalize;
     color: #403e57;
+}
+
+body.dark .cardFilters .col-md-3 h4{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark p,
+body.dark .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon,
+body.dark .css-bpeome-MuiSvgIcon-root-MuiSelect-icon{
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+
+body.dark .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.table-responsive::-webkit-scrollbar-thumb{
+    background: #ccc !important;
+}
+body.dark .table-responsive::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.3) !important;
 }
 
 .table .thead-dark th{
     background-color: #1866ee !important;
     border-color: rgba(255, 255, 255, 0.1) !important;
     font-size: 13px !important;
-}
-
-
-
-.table-responsive::-webkit-scrollbar-thumb{
-    background: #ccc !important;
 }
 
 
@@ -629,9 +745,9 @@ header .part2{
 }
 
 .table tbody .actions button{
-    min-width: 32px !important;
-    width: 32px !important;
-    height: 32px !important;  
+    min-width: 28px !important;
+    width: 28px !important;
+    height: 28px !important;  
     margin: 0px 3px !important; 
 }
 
@@ -646,7 +762,7 @@ header .part2{
 }
 
 .table tbody .actions button svg{
-    font-size: 32px !important;
+    font-size: 28px !important;
 }
 
 
@@ -706,12 +822,12 @@ table td .info p{
 }
 
 .table tbody tr:nth-child(odd) {
-    background-color: #403e57; /* Background color for every other row */
+    background-color: #f1f1f1; /* Background color for every other row */
 }
 
-.table tbody tr:hover {
+/* .table tbody tr:hover {
     background-color: #f1f1f1; /* Background color on hover */
-}
+/* } */
 
 table td .imgWrapper .img img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the image */
@@ -728,10 +844,28 @@ table td .imgWrapper .img img {
 }
 
 .tableFooter p{
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     margin-bottom: 0px;
 }
+
+body.dark  .table td{
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+body.dark .table-bordered td,body.dark .table-bordered th{
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+} 
+
+body.dark .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root:hover{
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+}
+
+body.dark .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root{
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
 
 .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
     background: #0858f7 !important;

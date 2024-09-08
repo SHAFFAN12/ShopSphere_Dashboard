@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dashboard from './pages/Dashboard';
 import Header from './components/Header';
 import SideBar from './components/SideBar';
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Login2 from './pages/Login2';
@@ -17,7 +17,21 @@ function App() {
   const [isToggleSidebar, setIsToggleSidebar] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const [isHideSidebarAndHeader, setIsHideSidebarAndHeader] = useState(false);
+  const [themeMode, setThemeMode] = useState(true);
 
+  useEffect(() => {
+    if (themeMode === true) {
+      document.body.classList.remove('dark');
+      document.body.classList.add('light');
+      localStorage.setItem('themeMode', 'light');
+    }
+    else{
+      document.body.classList.remove('light');
+      document.body.classList.add('dark');
+      localStorage.setItem('themeMode', 'dark');
+    }
+
+  }, [themeMode]);
 
 
 
@@ -27,7 +41,9 @@ function App() {
     isLogin,
     setIsLogin,
     isHideSidebarAndHeader,
-    setIsHideSidebarAndHeader
+    setIsHideSidebarAndHeader,
+    themeMode,
+    setThemeMode
   }
 
   return (

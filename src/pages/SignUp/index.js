@@ -22,6 +22,7 @@ const SignUp = () => {
   
     useEffect(() =>{
       context.setIsHideSidebarAndHeader(true);
+      window.scrollTo(0,0);
     },[]);
   
     const focusInput = (index) => {
@@ -35,7 +36,7 @@ const SignUp = () => {
           
           <div className="row">
             <div className="col-md-8 d-flex align-items-center flex-column justify-content-center part1">
-              <h1>ShopSphere ECommerce Dashboard & Admin Panel</h1>
+              <h1>ShopSphere <span className='text-sky'>ECommerce Dashboard</span> & Admin Panel</h1>
               <p>🛍 Your ultimate destination for all things fabulous! Explore a world of style and convenience at ShopSphere. Discover the latest trends, must-have essentials, and unique treasures all in one place. Join our vibrant community of savvy shoppers and let's make every purchase an experience to remember! ✨</p>
 
               <div className='w-100 mt-4'>
@@ -57,7 +58,7 @@ const SignUp = () => {
                       <span className='icon'><FaUserAlt/></span>
                       <input type='text' className='form-control' 
                       onFocus={() => focusInput(0)} onBlur={() => setInputIndex(null)} 
-                      placeholder='Enter Your Name'/>
+                      placeholder='Enter Your Name' autoFocus/>
                     </div>
                     <div className={`form-group position-relative ${inputIndex === 1 && 'focus'}`}>
                       <span className='icon'><MdEmail/></span>
