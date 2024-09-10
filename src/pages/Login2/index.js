@@ -5,7 +5,8 @@ import { MdEmail } from "react-icons/md";
 import { IoIosLock } from "react-icons/io";
 import { FaGoogle, FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa6";
 // import Image1 from "../../assets/images/log.svg";
-import Image1 from "../../assets/images/1.jpg";
+// import Image1 from "../../assets/images/1.jpg";
+import Image1 from "../../assets/images/2-removebg-preview.png";
 // import Image1 from "../../assets/images/2.jpg";
 // import Image1 from "../../assets/images/3.jpg";
 import Image2 from "../../assets/images/register.svg";
@@ -21,6 +22,8 @@ const Login2 = () => {
   const [inputIndex, setInputIndex] = useState(null);
   
   const [isShowPassword,setIsShowPassword] = useState(false);
+  const [isShowConfirmPassword,setIsShowConfirmPassword] = useState(false);
+
 
 
   const context = useContext(MyContext);
@@ -48,7 +51,7 @@ const Login2 = () => {
       <div className={`container ${isSignUpMode ? 'sign-up-mode' : ''}`}>
         <div className="forms-container">
           <div className="signin-signup">
-            <form className="sign-in-form">
+            <form className="form sign-in-form">
               <h2 className="title">Sign in</h2>
               <div className={`input-field ${inputIndex === 0 && 'focus'}`}>
                 <FaUserAlt />
@@ -59,7 +62,7 @@ const Login2 = () => {
 
               <div className={`input-field ${inputIndex === 1 && 'focus'}`}>
                 <IoIosLock />
-                <input type="password" placeholder="Password" onFocus={() => focusInput(1)} onBlur={() => setInputIndex(null)} />
+                <input type={`${isShowPassword === true ? 'text' : 'password'}`} placeholder="Password" onFocus={() => focusInput(1)} onBlur={() => setInputIndex(null)} />
                 <span className="showPassword" onClick={() => setIsShowPassword(!isShowPassword)}>
                       {
                         isShowPassword === true ? <FaRegEyeSlash/> : <FaRegEye/>
@@ -89,7 +92,7 @@ const Login2 = () => {
               </div>
             </form>
 
-            <form className="sign-up-form">
+            <form className="form sign-up-form">
               <h2 className="title">Sign up</h2>
 
               <div className={`input-field ${inputIndex === 2 && 'focus'}`}>
@@ -106,7 +109,7 @@ const Login2 = () => {
 
               <div className={`input-field ${inputIndex === 4 && 'focus'}`}>
                 <IoIosLock />
-                <input type="password" placeholder="Password" onFocus={() => focusInput(4)} onBlur={() => setInputIndex(null)} />
+                <input type={`${isShowPassword === true ? 'text' : 'password'}`} placeholder="Password" onFocus={() => focusInput(4)} onBlur={() => setInputIndex(null)} />
                 <span className="showPassword" onClick={() => setIsShowPassword(!isShowPassword)}>
                       {
                         isShowPassword === true ? <FaRegEyeSlash/> : <FaRegEye/>
@@ -117,10 +120,10 @@ const Login2 = () => {
 
               <div className={`input-field ${inputIndex === 5 && 'focus'}`}>
                 <IoShieldCheckmarkSharp />
-                <input type="password" placeholder="Confirm Password" onFocus={() => focusInput(5)} onBlur={() => setInputIndex(null)} />
-                <span className="showPassword" onClick={() => setIsShowPassword(!isShowPassword)}>
+                <input type={`${isShowConfirmPassword === true ? 'text' : 'password'}`} placeholder="Confirm Password" onFocus={() => focusInput(5)} onBlur={() => setInputIndex(null)} />
+                <span className="showPassword" onClick={() => setIsShowConfirmPassword(!isShowConfirmPassword)}>
                       {
-                        isShowPassword === true ? <FaRegEyeSlash/> : <FaRegEye/>
+                        isShowConfirmPassword === true ? <FaRegEyeSlash/> : <FaRegEye/>
                       }
                       </span>
               </div>
@@ -157,10 +160,7 @@ const Login2 = () => {
                 Sign up
               </Button>
 
-              {/* <Link className='signup-button'>
-              <span>Button</span>
-              <div className='liquid'></div>
-            </Link> */}
+              
             </div>
             <img src={Image1} className="image" alt="sign up" />
           </div>
