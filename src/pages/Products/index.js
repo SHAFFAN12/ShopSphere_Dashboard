@@ -1,19 +1,26 @@
-import React from 'react';
-import Pagination from '@mui/material/Pagination';
+import React, { useContext, useEffect, useState } from "react";
+import { Button, Rating } from '@mui/material';
 import { Breadcrumbs, FormControl, MenuItem, Select } from '@mui/material';
+import Menu from '@mui/material/Menu';
+import Pagination from '@mui/material/Pagination';
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { FaEye } from "react-icons/fa";
+import { FaCircleUser, FaPencil } from "react-icons/fa6";
 import HomeIcon from '@mui/icons-material/Home';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {emphasize, styled} from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
-import DashboardBox from "../Dashboard/components/dashboardBox";
 import Checkbox from '@mui/material/Checkbox';
 import { MyContext } from '../../App';
-import { FaEye } from "react-icons/fa";
-import { FaCircleUser, FaPencil } from "react-icons/fa6";
-import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { MdDeleteForever } from "react-icons/md";
-import Menu from '@mui/material/Menu';
+import { TiShoppingCart } from "react-icons/ti";
+import { GiShoppingBag } from "react-icons/gi";
+import { TbStars } from "react-icons/tb";
+import Image1 from "../../assets/images/th.jpg";
+import { IoIosTimer } from "react-icons/io";
+import { AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import DashboardBox from "../Dashboard/components/dashboardBox";
 
 const label = {inputProps: {'arial-label' : 'Checkbox demo'}};
 
@@ -39,8 +46,20 @@ const handleClose = () => {
     setAnchorEl(null);
   };
 
+  const data = [
+    { name: 'Jan', value: 4000 },
+    { name: 'Feb', value: 3000 },
+    { name: 'Mar', value: 2000 },
+    { name: 'Apr', value: 2780 },
+    { name: 'May', value: 1890 },
+    { name: 'Jun', value: 2390 },
+    { name: 'Jul', value: 3490 },
+  ];
+  
+  
+
 const Products = () => {
-    const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const [showBy, setshowBy] = useState('');
   const [catBy, setCatBy] = useState('');
   const open = Boolean(anchorEl);

@@ -1,10 +1,10 @@
+import React, { useContext, useEffect, useState } from "react";
 import { Button } from '@mui/material';
 import FormControl from "@mui/material/FormControl";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Pagination from "@mui/material/Pagination";
 import Select from "@mui/material/Select";
-import React, { useContext, useEffect, useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaEye } from "react-icons/fa";
 import { FaCircleUser, FaPencil } from "react-icons/fa6";
@@ -17,6 +17,7 @@ import Image1 from "../../assets/images/th.jpg";
 import DashboardBox from './components/dashboardBox';
 import { AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { MyContext } from '../../App';
+import { Link } from 'react-router-dom';
 
 
 
@@ -203,7 +204,7 @@ const Dashboard = () => {
                   <td>Rs.3k</td>
                   <td>
                     <div className="actions d-flex align-items-center">
-                      <Button className="secondary" color="secondary"><FaEye /></Button>
+                    <Link to='/product/details'><Button className="secondary" color="secondary"><FaEye /></Button></Link>
                       <Button className="success" color="success"><FaPencil /></Button>
                       <Button className="error" color="error"><MdDeleteForever /></Button>
                     </div>
@@ -239,7 +240,7 @@ const Dashboard = () => {
                   <td>Rs.3k</td>
                   <td>
                     <div className="actions d-flex align-items-center">
-                      <Button className="secondary" color="secondary"><FaEye /></Button>
+                    <Link to='/product/details'><Button className="secondary" color="secondary"><FaEye /></Button></Link>
                       <Button className="success" color="success"><FaPencil /></Button>
                       <Button className="error" color="error"><MdDeleteForever /></Button>
                     </div>
@@ -275,7 +276,7 @@ const Dashboard = () => {
                   <td>Rs.3k</td>
                   <td>
                     <div className="actions d-flex align-items-center">
-                      <Button className="secondary" color="secondary"><FaEye /></Button>
+                    <Link to='/product/details'><Button className="secondary" color="secondary"><FaEye /></Button></Link>
                       <Button className="success" color="success"><FaPencil /></Button>
                       <Button className="error" color="error"><MdDeleteForever /></Button>
                     </div>
@@ -311,7 +312,7 @@ const Dashboard = () => {
                   <td>Rs.3k</td>
                   <td>
                     <div className="actions d-flex align-items-center">
-                      <Button className="secondary" color="secondary"><FaEye /></Button>
+                    <Link to='/product/details'><Button className="secondary" color="secondary"><FaEye /></Button></Link>
                       <Button className="success" color="success"><FaPencil /></Button>
                       <Button className="error" color="error"><MdDeleteForever /></Button>
                     </div>
@@ -347,7 +348,7 @@ const Dashboard = () => {
                   <td>Rs.3k</td>
                   <td>
                     <div className="actions d-flex align-items-center">
-                      <Button className="secondary" color="secondary"><FaEye /></Button>
+                    <Link to='/product/details'><Button className="secondary" color="secondary"><FaEye /></Button></Link>
                       <Button className="success" color="success"><FaPencil /></Button>
                       <Button className="error" color="error"><MdDeleteForever /></Button>
                     </div>
@@ -382,7 +383,7 @@ const Dashboard = () => {
                   <td>Rs.3k</td>
                   <td>
                     <div className="actions d-flex align-items-center">
-                      <Button className="secondary" color="secondary"><FaEye /></Button>
+                    <Link to='/product/details'><Button className="secondary" color="secondary"><FaEye /></Button></Link>
                       <Button className="success" color="success"><FaPencil /></Button>
                       <Button className="error" color="error"><MdDeleteForever /></Button>
                     </div>

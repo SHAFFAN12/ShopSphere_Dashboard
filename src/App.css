@@ -28,6 +28,9 @@ body.dark{
 h1, h2, h3, h4, h5, h6, p{
     color: #403e57;
 }
+h4{
+    line-height: 32px;
+}
 
 .btn-blue{
     background: #0858f7 !important;
@@ -75,6 +78,7 @@ h1, h2, h3, h4, h5, h6, p{
     text-decoration: none;
 
 }
+
 
 header{
     width: 100%;
@@ -716,7 +720,7 @@ body.dark h6,
 body.dark p,
 body.dark .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon,
 body.dark .css-bpeome-MuiSvgIcon-root-MuiSelect-icon{
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 
@@ -737,12 +741,16 @@ body.dark .table-responsive::-webkit-scrollbar-thumb{
     font-size: 13px !important;
 }
 
+body.dark .table-striped tbody tr:nth-of-type(odd){
+    background: rgba(0, 0, 0, 0.2) !important;
+}
 
 .table tbody td{
     font-size: 14px !important;
     color: #2f2d3e;
     font-weight: 500;
 }
+
 
 .table tbody .actions button{
     min-width: 28px !important;
@@ -880,6 +888,19 @@ body.dark .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root{
     transform: scale(1.1);
 }
 
+body.dark .loginSection{
+    background: #112143 !important;
+}
+body.dark form .form-control{
+    background: #112143 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body.dark form .form-control::--webkit-input-placeholder{
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
 .loginSection{
     width: 100%;
     height: 100vh;
@@ -989,6 +1010,10 @@ body.dark .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root{
     font-weight: bold !important;
 }
 
+body.dark .css-1c99szj-MuiRating-icon{
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
 .signUpSection{
     background: #f1f1f1 !important;
     padding: 0px 0px;
@@ -1009,6 +1034,10 @@ body.dark .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root{
     padding-top: 1px !important;
 }
 
+body.dark .signUpSection .loginBox{
+    background: #1b2b4d !important;
+}
+
 .signUpSection .part1{
     padding-left: 100px;
     padding-right: 100px;
@@ -1018,11 +1047,78 @@ body.dark .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root{
     font-size: 50px;
     font-weight: 800;
 }
+.signUpSection .part1 h1 span{
+    font-weight: 800 !important;
+}
 .signUpSection .part1 p{
     font-size: 18px;
     font-weight: 500;
 }
 
+.checkbox label::before{
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.checkbox input:checked + label::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #0079bf;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.breadcrumbs_ a:hover {
+    text-decoration: none !important;
+}
+body.dark .breadcrumbs_ a {
+    background-color: #112143 !important;
+}
+
+body.dark .breadcrumbs_ a * {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body.dark .breadcrumbs_ li  .MuiChip-filled {
+    background-color: #112143 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body.dark .css-1wuw8dw-MuiBreadcrumbs-separator{
+    background-color: #112143 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+
+.slick-slide{
+    outline: none;
+}
+.sliderSmall .slick-slide{
+    padding-right: 10px;
+}
+
+.sliderSmall .slick-slide.item{
+    border-radius: 7px !important;
+    overflow: hidden;
+}
+
+.sliderSmall *, .sliderBig *{
+    transition: all .2s !important;
+}
+
+.sliderBig .item{
+    overflow: hidden;
+    border-radius: 7px;
+}
 
 
 
@@ -1310,8 +1406,6 @@ body.dark .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root{
     pointer-events: all;
   }
   
-
-
 
 
 
